@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSEC Summer Camp 2026 - Registration Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f5;
+        }
+        .urdu-text {
+            font-family: system-ui, -apple-system, sans-serif;
+            direction: rtl;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        /* Elegant Toggle Switch Custom Styles */
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #059669;
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <a href="https://wa.me/923182142500?text=Salam,%20I%20have%20a%20query%20regarding%20MSEC%20Summer%20Camp%202026" 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-emerald-600 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-700 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-2xl group">
+        <i class="fab fa-whatsapp"></i>
+        <span class="absolute right-14 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Contact Helpdesk</span>
+    </a>
+
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-900 text-white py-8 px-4 text-center shadow-lg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-3xl mx-auto relative z-10">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">MSEC SUMMER CAMP 2026</h1>
+            <p class="text-emerald-200 font-medium tracking-wide uppercase text-sm md:text-base">Muhammad Shafi Educational Complex (Shershah)</p>
+            <div class="mt-4 inline-block bg-emerald-700/50 px-4 py-1.5 rounded-full border border-emerald-500/30 text-xs md:text-sm">
+                <i class="far fa-calendar-alt mr-1.5"></i> June 15 – July 18, 2026
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto w-full px-4 py-6 flex-grow">
+        
+        <div class="glass-card rounded-2xl p-5 mb-6 shadow-md border-t-4 border-emerald-600 transition-all">
+            <h2 class="text-xl font-bold text-emerald-800 flex items-center gap-2 mb-2">
+                <i class="fas fa-graduation-cap"></i> Transform Your Summer Break!
+            </h2>
+            <p class="urdu-text text-gray-700 text-sm leading-relaxed mb-3">
+                محمد شفیع ایجوکیشنل کمپلیکس لے کر آیا ہے سمر کیمپ 2026، جہاں آپ ماہر اساتذہ کی زیر نگرانی مارکیٹ کی ڈیمانڈ کے مطابق ہینڈز آن پریکٹیکل کورسز سیکھیں گے۔
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-600 mt-2 bg-gray-50 p-3 rounded-xl">
+                <div><i class="fas fa-wallet text-emerald-600 mr-1"></i> Fee: PKR 1,000/- Month</div>
+                <div><i class="fas fa-clock text-emerald-600 mr-1"></i> Mon - Thu + Saturday</div>
+                <div class="col-span-2 text-rose-600"><i class="fas fa-exclamation-circle mr-1"></i> Deadline: On/Before June 12, 2026</div>
+            </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 shadow-xl relative">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center justify-between">
+                <span>Registration Form</span>
+                <span class="text-xs font-normal text-gray-500 urdu-text">داخلی فارم</span>
+            </h3>
+
+            <form id="registrationForm" class="space-y-4">
+                
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Student Full Name *</span>
+                        <span class="urdu-text text-gray-400 font-normal">طالب علم کا نام</span>
+                    </label>
+                    <input type="text" id="studentName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="Enter full name">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Father / Guardian Name *</span>
+                        <span class="urdu-text text-gray-400 font-normal">والد یا سرپرست کا نام</span>
+                    </label>
+                    <input type="text" id="fatherName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="Enter father's name">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1.5 flex justify-between">
+                        <span>Gender *</span>
+                        <span class="urdu-text text-gray-400 font-normal">جنس</span>
+                    </label>
+                    <div class="flex items-center">
+                        <label class="relative inline-flex items-center cursor-pointer select-none">
+                            <input type="checkbox" id="genderToggle" class="sr-only toggle-checkbox">
+                            <div class="w-36 h-9 bg-emerald-600 rounded-full toggle-label transition-colors duration-300 flex items-center justify-between px-3 text-xs font-bold text-white shadow-inner">
+                                <span class="z-10 pl-1">MALE</span>
+                                <span class="z-10 pr-1">FEMALE</span>
+                                <div class="absolute top-1 left-1 bg-white w-16 h-7 rounded-full toggle-dot transition-transform duration-300 shadow flex items-center justify-center text-[10px] text-emerald-800 font-extrabold uppercase">Selected</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>CNIC / B-Form Number *</span>
+                        <span class="urdu-text text-gray-400 font-normal">شناختی کارڈ یا بی فارم نمبر</span>
+                    </label>
+                    <input type="text" id="cnic" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="XXXXX-XXXXXXX-X" pattern="[0-8]{5}-[0-9]{7}-[0-9]{1}||[0-9]{13||15}">
+                    <p class="text-[10px] text-gray-500 mt-0.5 urdu-text">اگر طالب علم کا شناختی کارڈ نہیں ہے تو والد کا نمبر لکھیں۔</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Education Level *</span>
+                        <span class="urdu-text text-gray-400 font-normal">تعلیمی قابلیت</span>
+                    </label>
+                    <select id="education" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
+                        <option value="" disabled selected>Select Qualification</option>
+                        <option value="Primary">Primary</option>
+                        <option value="Secondary">Secondary</option>
+                        <option value="Matric">Matric</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="Masters">Masters / Above</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Applicant Category *</span>
+                        <span class="urdu-text text-gray-400 font-normal">درجہ یا کیٹیگری</span>
+                    </label>
+                    <select id="role" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
+                        <option value="" disabled selected>Select Category</option>
+                        <option value="Student">Student (طالب علم)</option>
+                        <option value="Teacher">Teacher (استاد)</option>
+                        <option value="Working Professional">Working Professional (ملازمت پیشہ)</option>
+                        <option value="Housewife">Housewife (گھریلو خاتون)</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>WhatsApp Number *</span>
+                        <span class="urdu-text text-gray-400 font-normal">واٹس ایپ نمبر</span>
+                    </label>
+                    <input type="tel" id="whatsapp" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="e.g. 03XXXXXXXXX">
+                    <p class="text-[10px] text-gray-500 mt-0.5 urdu-text">ترجیحی طور پر واٹس ایپ والا فعال نمبر فراہم کریں۔</p>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Email Address</span>
+                        <span class="urdu-text text-gray-400 font-normal">ای میل ایڈریس</span>
+                    </label>
+                    <input type="email" id="email" class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="name@example.com">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Current Resident Address *</span>
+                        <span class="urdu-text text-gray-400 font-normal">موجودہ رہائشی پتہ</span>
+                    </label>
+                    <textarea id="address" rows="2" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm resize-none" placeholder="Enter physical address"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                        <span>Select Your Skill Track *</span>
+                        <span class="urdu-text text-gray-400 font-normal">کورس کا انتخاب</span>
+                    </label>
+                    <select id="course" required onchange="updateCourseDetails()" class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white font-semibold text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
+                        <option value="" disabled selected>Choose a course</option>
+                        <option value="ICT & MS Office">💻 ICT & MS Office</option>
+                        <option value="Graphic Designing">🎨 Graphic Designing</option>
+                        <option value="Basic Stitching">🪡 Basic Stitching</option>
+                        <option value="Self-Grooming & Beautician">💄 Self-Grooming & Beautician</option>
+                    </select>
+                </div>
+
+                <div id="coursePreviewWindow" class="hidden bg-emerald-50/80 border border-emerald-200 rounded-xl p-4 transition-all duration-300 animate-fadeIn">
+                    <h4 id="previewTitle" class="text-sm font-bold text-emerald-900 mb-1">Course Details</h4>
+                    <div class="flex items-center gap-3 text-xs text-emerald-700 font-medium mb-2 pb-1.5 border-b border-emerald-200/50">
+                        <span id="previewTime"><i class="far fa-clock mr-1"></i> Timings</span>
+                        <span><i class="fas fa-layer-group mr-1"></i> Hands-on Lab</span>
+                    </div>
+                    <ul id="previewOutline" class="text-xs text-gray-700 space-y-1 list-disc pl-4 urdu-text text-right" style="direction: rtl;">
+                        </ul>
+                </div>
+
+                <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl shadow-md transform active:scale-98 transition-all duration-150 text-sm mt-2 flex items-center justify-center gap-2">
+                    <span>Submit Registration</span> <i class="fas fa-paper-plane text-xs"></i>
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 text-[11px] py-4 text-center mt-8 border-t border-gray-800">
+        <p>© 2026 GCT Technical & IT Education Initiative. All Rights Reserved.</p>
+        <p class="text-gray-600 mt-0.5">Designed with Mobile-First Optimization Architecture</p>
+    </footer>
+
+    <div id="statusModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl scale-95 transition-transform duration-300" id="modalCard">
+            <div id="modalLoading">
+                <div class="animate-spin rounded-full h-12 w-12 border-4 border-emerald-500 border-t-transparent mx-auto mb-4"></div>
+                <h3 class="font-semibold text-gray-800 text-base">Processing Registration...</h3>
+                <p class="text-xs text-gray-500 mt-1">Please do not close this window.</p>
+            </div>
+            <div id="modalSuccess" class="hidden">
+                <div class="h-14 w-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-inner">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="font-bold text-gray-900 text-lg">Registration Successful!</h3>
+                <p class="urdu-text text-sm text-gray-600 mt-2">
+                    آپ کا فارم کامیابی کے ساتھ جمع ہو چکا ہے۔ اپنی سیٹ کنفرم کرنے کے لیے فوری طور پر کیمپس (MSEC شیرشاہ) وزٹ کر کے فیس جمع کروائیں۔
+                </p>
+                <button onclick="closeModal()" class="mt-5 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-all">
+                    Got it, Thanks!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // PASTE YOUR COPIED GOOGLE APPS SCRIPT WEB APP URL HERE:
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxpUNa2X6pgBFyKGdLv40tdl46h6QndloU_o-i5F5qhDuZHYGu_vkjSZN9d3VrQAOJ3bQ/exec";
+
+        // Course Database Matrix
+        const courseData = {
+            "ICT & MS Office": {
+                time: "09:00 AM - 11:00 AM",
+                outline: [
+                    "کمپیوٹر کے بنیادی اصول اور ونڈوز آپریٹنگ سسٹم کا استعمال",
+                    "مائیکروسافٹ ورڈ (MS Word) میں پروفیشنل دستاویزات بنانا",
+                    "مائیکروسافٹ ایکسل (MS Excel) میں فارمولے اور ڈیٹا انٹری",
+                    "پاور پوائنٹ (MS PowerPoint) پر اینیمیٹڈ پریزنٹیشن بنانا",
+                    "انٹرنیٹ براؤزنگ اور پروفیشنل ای میل کمیونیکیشن کے طریقے"
+                ]
+            },
+            "Graphic Designing": {
+                time: "11:30 AM - 01:30 PM",
+                outline: [
+                    "گرافک ڈیزائننگ کے بنیادی تھیوری اور کلر اسکیم گائیڈ لائنز",
+                    "ایڈوبی فوٹوشاپ / کینوا پر سوشل میڈیا پوسٹ ڈیزائننگ",
+                    "پروفیشنل بروشر، فلائرز اور برانڈ لوگو ڈیزائننگ",
+                    "امیج ایڈیٹنگ، بیک گراؤنڈ ریمول اور ویکٹر ٹریسنگ",
+                    "فری لانسنگ مارکیٹ پلیسز پر گرافک سروسز سیل کرنا"
+                ]
+            },
+            "Basic Stitching": {
+                time: "09:00 AM - 11:00 AM",
+                outline: [
+                    "سلائی مشین کا استعمال، دیکھ بھال اور بنیادی تکنیک",
+                    "کپڑے کی ناپ لینے اور ڈرافٹنگ کا درست طریقہ",
+                    "بنیادی کٹائی (Cutting) اور سلائی (Stitching) کے مراحل",
+                    "مختلف قسم کے گلے اور آستین کے خوبصورت ڈیزائن",
+                    "روزمرہ استعمال کے سادہ اور فینسی ملبوسات کی تیاری"
+                ]
+            },
+            "Self-Grooming & Beautician": {
+                time: "11:30 AM - 01:30 PM",
+                outline: [
+                    "اسکن کیئر، تھریڈنگ اور فیشل مساج کے بنیادی طریقے",
+                    "پارٹی میک اپ اور کیژول گرومنگ ٹپس",
+                    "بنیادی ہیئر اسٹائلنگ اور بالوں کی حفاظت کے طریقے",
+                    "مہندی ڈیزائننگ (پاکستانی اور عربی اسٹائلز)",
+                    "پیشہ ورانہ بیوٹی پارلر سیٹ اپ اور کسٹمر ڈیلنگ"
+                ]
+            }
+        };
+
+        function updateCourseDetails() {
+            const selectEl = document.getElementById("course");
+            const previewWin = document.getElementById("coursePreviewWindow");
+            const titleEl = document.getElementById("previewTitle");
+            const timeEl = document.getElementById("previewTime");
+            const outlineEl = document.getElementById("previewOutline");
+
+            const selected = selectEl.value;
+            if (courseData[selected]) {
+                previewWin.classList.remove("hidden");
+                titleEl.innerText = selected + " Tracking Summary";
+                timeEl.innerHTML = `<i class="far fa-clock mr-1"></i> Class Timing: **${courseData[selected].time}**`;
+                
+                outlineEl.innerHTML = "";
+                courseData[selected].outline.forEach(point => {
+                    const li = document.createElement("li");
+                    li.innerText = point;
+                    outlineEl.appendChild(li);
+                });
+            } else {
+                previewWin.classList.add("hidden");
+            }
+        }
+
+        // Handle Form Submission Pipeline
+        document.getElementById("registrationForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            // Open Loading Status Overlay
+            document.getElementById("statusModal").classList.remove("hidden");
+            document.getElementById("modalLoading").classList.remove("hidden");
+            document.getElementById("modalSuccess").classList.add("hidden");
+
+            // Evaluate Gender Toggle Value (If checked = Male, unchecked = Female default)
+            const isMale = document.getElementById("genderToggle").checked;
+            const genderValue = isMale ? "Male" : "Female";
+
+            // Map Object matching App Script JSON parameters
+            const formData = {
+                studentName: document.getElementById("studentName").value,
+                fatherName: document.getElementById("fatherName").value,
+                gender: genderValue,
+                cnic: document.getElementById("cnic").value,
+                education: document.getElementById("education").value,
+                role: document.getElementById("role").value,
+                whatsapp: document.getElementById("whatsapp").value,
+                email: document.getElementById("email").value || "N/A",
+                address: document.getElementById("address").value,
+                course: document.getElementById("course").value
+            };
+
+            // Execute HTTP Post via Fetch API API Bridge
+            fetch(SCRIPT_URL, {
+                method: "POST",
+                mode: "no-cors", // Necessary bypass for standard Google Redirects
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(res => {
+                // Since no-cors returns opaque responses, assume success if network executes
+                document.getElementById("modalLoading").classList.add("hidden");
+                document.getElementById("modalSuccess").classList.remove("hidden");
+                document.getElementById("registrationForm").reset();
+                document.getElementById("coursePreviewWindow").classList.add("hidden");
+            })
+            .catch(err => {
+                alert("Network error, please try again or contact support.");
+                closeModal();
+            });
+        });
+
+        function closeModal() {
+            document.getElementById("statusModal").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
