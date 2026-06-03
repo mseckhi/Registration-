@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSEC Summer Camp 2026 - Registration Portal</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -21,53 +21,59 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(229, 231, 235, 0.5);
         }
-        /* Elegant Toggle Switch Custom Styles */
-        .toggle-checkbox:checked + .toggle-label {
-            background-color: #059669;
-        }
-        .toggle-checkbox:checked + .toggle-label .toggle-dot {
-            transform: translateX(100%);
+        /* Custom Input Error State */
+        .input-error {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 0 1px #ef4444 !important;
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="text-gray-800 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-200">
 
     <a href="https://wa.me/923182142500?text=Salam,%20I%20have%20a%20query%20regarding%20MSEC%20Summer%20Camp%202026" 
        target="_blank" 
-       class="fixed bottom-6 right-6 bg-emerald-600 text-white p-4 rounded-full shadow-2xl hover:bg-emerald-700 transition-all duration-300 transform hover:scale-110 z-50 flex items-center justify-center text-2xl group">
+       class="fixed bottom-5 right-5 bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 z-50 flex items-center justify-center text-xl group">
         <i class="fab fa-whatsapp"></i>
-        <span class="absolute right-14 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Contact Helpdesk</span>
+        <span class="absolute right-12 bg-gray-900 text-white text-[10px] py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Need Help?</span>
     </a>
 
-    <header class="bg-gradient-to-r from-emerald-800 to-teal-900 text-white py-8 px-4 text-center shadow-lg relative overflow-hidden">
+    <header class="bg-gradient-to-br from-emerald-800 to-teal-900 text-white pt-8 pb-6 px-4 text-center shadow-lg relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-3xl mx-auto relative z-10">
-            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">MSEC SUMMER CAMP 2026</h1>
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2 drop-shadow-md">MSEC SUMMER CAMP 2026</h1>
             <p class="text-emerald-200 font-medium tracking-wide uppercase text-sm md:text-base">Muhammad Shafi Educational Complex (Shershah)</p>
-            <div class="mt-4 inline-block bg-emerald-700/50 px-4 py-1.5 rounded-full border border-emerald-500/30 text-xs md:text-sm">
-                <i class="far fa-calendar-alt mr-1.5"></i> June 15 – July 18, 2026
+            <div class="mt-4 inline-block bg-emerald-700/50 px-4 py-1.5 rounded-full border border-emerald-500/30 text-xs md:text-sm font-medium shadow-sm">
+                <i class="far fa-calendar-alt mr-1.5 text-emerald-300"></i> June 15 – July 18, 2026
+            </div>
+
+            <div class="mt-6 flex flex-wrap justify-center gap-2">
+                <p class="w-full text-xs text-emerald-100 mb-1 opacity-80">View Detailed Course Outlines:</p>
+                <a href="ict-outline.html" class="bg-white/10 hover:bg-white/25 text-white text-[11px] py-1.5 px-3 rounded-full backdrop-blur-sm transition-all border border-white/20"><i class="fas fa-laptop mr-1"></i> ICT & Office</a>
+                <a href="graphics-outline.html" class="bg-white/10 hover:bg-white/25 text-white text-[11px] py-1.5 px-3 rounded-full backdrop-blur-sm transition-all border border-white/20"><i class="fas fa-paint-brush mr-1"></i> Graphics</a>
+                <a href="stitching-outline.html" class="bg-white/10 hover:bg-white/25 text-white text-[11px] py-1.5 px-3 rounded-full backdrop-blur-sm transition-all border border-white/20"><i class="fas fa-cut mr-1"></i> Stitching</a>
+                <a href="beautician-outline.html" class="bg-white/10 hover:bg-white/25 text-white text-[11px] py-1.5 px-3 rounded-full backdrop-blur-sm transition-all border border-white/20"><i class="fas fa-spa mr-1"></i> Beautician</a>
             </div>
         </div>
     </header>
 
     <main class="max-w-md mx-auto w-full px-4 py-6 flex-grow">
         
-        <div class="glass-card rounded-2xl p-5 mb-6 shadow-md border-t-4 border-emerald-600 transition-all">
+        <div class="glass-card rounded-2xl p-5 mb-6 shadow-md border-t-4 border-emerald-600 hover:shadow-lg transition-shadow">
             <h2 class="text-xl font-bold text-emerald-800 flex items-center gap-2 mb-2">
-                <i class="fas fa-graduation-cap"></i> Transform Your Summer Break!
+                <i class="fas fa-graduation-cap"></i> Transform Your Summer!
             </h2>
             <p class="urdu-text text-gray-700 text-sm leading-relaxed mb-3">
                 محمد شفیع ایجوکیشنل کمپلیکس لے کر آیا ہے سمر کیمپ 2026، جہاں آپ ماہر اساتذہ کی زیر نگرانی مارکیٹ کی ڈیمانڈ کے مطابق ہینڈز آن پریکٹیکل کورسز سیکھیں گے۔
             </p>
-            <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-600 mt-2 bg-gray-50 p-3 rounded-xl">
-                <div><i class="fas fa-wallet text-emerald-600 mr-1"></i> Fee: PKR 1,000/- Month</div>
-                <div><i class="fas fa-clock text-emerald-600 mr-1"></i> Mon - Thu + Saturday</div>
-                <div class="col-span-2 text-rose-600"><i class="fas fa-exclamation-circle mr-1"></i> Deadline: On/Before June 12, 2026</div>
+            <div class="grid grid-cols-2 gap-3 text-xs font-semibold text-gray-600 mt-2 bg-gray-50 p-3 rounded-xl border border-gray-100">
+                <div class="flex items-center"><i class="fas fa-wallet text-emerald-600 mr-2 text-sm"></i> PKR 1,000 / Month</div>
+                <div class="flex items-center"><i class="fas fa-clock text-emerald-600 mr-2 text-sm"></i> Mon-Thu + Sat</div>
+                <div class="col-span-2 text-rose-600 flex items-center bg-rose-50 p-1.5 rounded-lg"><i class="fas fa-exclamation-circle mr-2"></i> Deadline: On/Before June 12, 2026</div>
             </div>
         </div>
 
-        <div class="glass-card rounded-2xl p-6 shadow-xl relative">
-            <h3 class="text-lg font-semibold text-gray-800 mb-4 border-b pb-2 flex items-center justify-between">
+        <div class="glass-card rounded-2xl p-6 shadow-xl relative animate-fade-in-up">
+            <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center justify-between">
                 <span>Registration Form</span>
                 <span class="text-xs font-normal text-gray-500 urdu-text">داخلی فارم</span>
             </h3>
@@ -79,7 +85,7 @@
                         <span>Student Full Name *</span>
                         <span class="urdu-text text-gray-400 font-normal">طالب علم کا نام</span>
                     </label>
-                    <input type="text" id="studentName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="Enter full name">
+                    <input type="text" id="studentName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300" placeholder="Enter full name">
                 </div>
 
                 <div>
@@ -87,7 +93,7 @@
                         <span>Father / Guardian Name *</span>
                         <span class="urdu-text text-gray-400 font-normal">والد یا سرپرست کا نام</span>
                     </label>
-                    <input type="text" id="fatherName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="Enter father's name">
+                    <input type="text" id="fatherName" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300" placeholder="Enter father's name">
                 </div>
 
                 <div>
@@ -95,24 +101,19 @@
                         <span>Gender *</span>
                         <span class="urdu-text text-gray-400 font-normal">جنس</span>
                     </label>
-                    <div class="flex items-center">
-                        <label class="relative inline-flex items-center cursor-pointer select-none">
-                            <input type="checkbox" id="genderToggle" class="sr-only toggle-checkbox">
-                            <div class="w-36 h-9 bg-emerald-600 rounded-full toggle-label transition-colors duration-300 flex items-center justify-between px-3 text-xs font-bold text-white shadow-inner">
-                                <span class="z-10 pl-1">MALE</span>
-                                <span class="z-10 pr-1">FEMALE</span>
-                                <div class="absolute top-1 left-1 bg-white w-16 h-7 rounded-full toggle-dot transition-transform duration-300 shadow flex items-center justify-center text-[10px] text-emerald-800 font-extrabold uppercase">Selected</div>
-                            </div>
-                        </label>
+                    <div class="flex rounded-xl bg-gray-200 p-1 w-full max-w-[200px] shadow-inner">
+                        <button type="button" id="btnMale" class="w-1/2 py-1.5 text-[11px] font-bold rounded-lg text-gray-500 hover:text-gray-700 transition-all duration-200">MALE</button>
+                        <button type="button" id="btnFemale" class="w-1/2 py-1.5 text-[11px] font-bold rounded-lg bg-white shadow-sm text-emerald-700 transition-all duration-200">FEMALE</button>
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
                         <span>CNIC / B-Form Number *</span>
-                        <span class="urdu-text text-gray-400 font-normal">شناختی کارڈ یا بی فارم نمبر</span>
+                        <span class="urdu-text text-gray-400 font-normal">شناختی کارڈ نمبر</span>
                     </label>
-                    <input type="text" id="cnic" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="XXXXX-XXXXXXX-X" pattern="[0-8]{5}-[0-9]{7}-[0-9]{1}||[0-9]{13||15}">
+                    <input type="text" id="cnic" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300 font-mono tracking-wider" placeholder="00000-0000000-0">
+                    <p id="cnicError" class="text-[10px] text-red-500 mt-1 hidden font-medium"><i class="fas fa-times-circle mr-1"></i> Please enter a complete 13-digit CNIC</p>
                     <p class="text-[10px] text-gray-500 mt-0.5 urdu-text">اگر طالب علم کا شناختی کارڈ نہیں ہے تو والد کا نمبر لکھیں۔</p>
                 </div>
 
@@ -121,7 +122,7 @@
                         <span>Education Level *</span>
                         <span class="urdu-text text-gray-400 font-normal">تعلیمی قابلیت</span>
                     </label>
-                    <select id="education" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
+                    <select id="education" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300 cursor-pointer">
                         <option value="" disabled selected>Select Qualification</option>
                         <option value="Primary">Primary</option>
                         <option value="Secondary">Secondary</option>
@@ -137,7 +138,7 @@
                         <span>Applicant Category *</span>
                         <span class="urdu-text text-gray-400 font-normal">درجہ یا کیٹیگری</span>
                     </label>
-                    <select id="role" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
+                    <select id="role" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300 cursor-pointer">
                         <option value="" disabled selected>Select Category</option>
                         <option value="Student">Student (طالب علم)</option>
                         <option value="Teacher">Teacher (استاد)</option>
@@ -152,8 +153,8 @@
                         <span>WhatsApp Number *</span>
                         <span class="urdu-text text-gray-400 font-normal">واٹس ایپ نمبر</span>
                     </label>
-                    <input type="tel" id="whatsapp" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="e.g. 03XXXXXXXXX">
-                    <p class="text-[10px] text-gray-500 mt-0.5 urdu-text">ترجیحی طور پر واٹس ایپ والا فعال نمبر فراہم کریں۔</p>
+                    <input type="tel" id="whatsapp" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300 font-mono" placeholder="03XXXXXXXXX">
+                    <p id="waError" class="text-[10px] text-red-500 mt-1 hidden font-medium"><i class="fas fa-times-circle mr-1"></i> Number must start with 03 and be 11 digits long.</p>
                 </div>
 
                 <div>
@@ -161,7 +162,8 @@
                         <span>Email Address</span>
                         <span class="urdu-text text-gray-400 font-normal">ای میل ایڈریس</span>
                     </label>
-                    <input type="email" id="email" class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm" placeholder="name@example.com">
+                    <input type="email" id="email" class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm hover:border-emerald-300" placeholder="name@example.com">
+                    <p id="emailError" class="text-[10px] text-red-500 mt-1 hidden font-medium"><i class="fas fa-times-circle mr-1"></i> Please enter a valid email.</p>
                 </div>
 
                 <div>
@@ -169,16 +171,16 @@
                         <span>Current Resident Address *</span>
                         <span class="urdu-text text-gray-400 font-normal">موجودہ رہائشی پتہ</span>
                     </label>
-                    <textarea id="address" rows="2" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm resize-none" placeholder="Enter physical address"></textarea>
+                    <textarea id="address" rows="2" required class="w-full px-3.5 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm resize-none hover:border-emerald-300" placeholder="Enter complete home address..."></textarea>
                 </div>
 
-                <div>
-                    <label class="block text-xs font-semibold text-gray-700 mb-1 flex justify-between">
+                <div class="pt-2">
+                    <label class="block text-xs font-semibold text-emerald-800 mb-1 flex justify-between">
                         <span>Select Your Skill Track *</span>
-                        <span class="urdu-text text-gray-400 font-normal">کورس کا انتخاب</span>
+                        <span class="urdu-text text-emerald-600 font-normal">کورس کا انتخاب</span>
                     </label>
-                    <select id="course" required onchange="updateCourseDetails()" class="w-full px-3.5 py-2 rounded-xl border border-gray-300 bg-white font-semibold text-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm">
-                        <option value="" disabled selected>Choose a course</option>
+                    <select id="course" required onchange="updateCourseDetails()" class="w-full px-3.5 py-3 rounded-xl border-2 border-emerald-200 bg-emerald-50 font-semibold text-emerald-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all text-sm cursor-pointer hover:border-emerald-400 shadow-sm">
+                        <option value="" disabled selected>-- Choose a Course Program --</option>
                         <option value="ICT & MS Office">💻 ICT & MS Office</option>
                         <option value="Graphic Designing">🎨 Graphic Designing</option>
                         <option value="Basic Stitching">🪡 Basic Stitching</option>
@@ -186,30 +188,49 @@
                     </select>
                 </div>
 
-                <div id="coursePreviewWindow" class="hidden bg-emerald-50/80 border border-emerald-200 rounded-xl p-4 transition-all duration-300 animate-fadeIn">
-                    <h4 id="previewTitle" class="text-sm font-bold text-emerald-900 mb-1">Course Details</h4>
-                    <div class="flex items-center gap-3 text-xs text-emerald-700 font-medium mb-2 pb-1.5 border-b border-emerald-200/50">
+                <div id="coursePreviewWindow" class="hidden bg-white border border-emerald-100 shadow-inner rounded-xl p-4 transition-all duration-300 mt-2">
+                    <h4 id="previewTitle" class="text-sm font-bold text-emerald-800 mb-1">Course Summary</h4>
+                    <div class="flex items-center gap-3 text-xs text-emerald-600 font-medium mb-3 pb-2 border-b border-emerald-50">
                         <span id="previewTime"><i class="far fa-clock mr-1"></i> Timings</span>
-                        <span><i class="fas fa-layer-group mr-1"></i> Hands-on Lab</span>
+                        <span><i class="fas fa-layer-group mr-1"></i> Practical Lab</span>
                     </div>
-                    <ul id="previewOutline" class="text-xs text-gray-700 space-y-1 list-disc pl-4 urdu-text text-right" style="direction: rtl;">
+                    <ul id="previewOutline" class="text-xs text-gray-600 space-y-1.5 list-none pl-1 font-medium">
                         </ul>
                 </div>
 
-                <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl shadow-md transform active:scale-98 transition-all duration-150 text-sm mt-2 flex items-center justify-center gap-2">
-                    <span>Submit Registration</span> <i class="fas fa-paper-plane text-xs"></i>
+                <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl shadow-lg transform hover:-translate-y-0.5 transition-all duration-200 text-sm mt-4 flex items-center justify-center gap-2">
+                    <span>Confirm Registration</span> <i class="fas fa-arrow-right text-xs"></i>
                 </button>
 
             </form>
         </div>
     </main>
 
-    <footer class="bg-gray-900 text-gray-400 text-[11px] py-4 text-center mt-8 border-t border-gray-800">
-        <p>© 2026 GCT Technical & IT Education Initiative. All Rights Reserved.</p>
-        <p class="text-gray-600 mt-0.5">Designed with Mobile-First Optimization Architecture</p>
+    <footer class="bg-[#111827] text-gray-300 py-8 text-center mt-8 border-t-4 border-emerald-700">
+        <div class="max-w-md mx-auto px-4 text-xs space-y-3">
+            <h4 class="font-bold text-base text-white mb-2 tracking-wide">Muhammad Shafi Educational Complex</h4>
+            
+            <p class="flex items-center justify-center gap-2">
+                <i class="fas fa-map-marker-alt text-emerald-500 text-sm w-4"></i>
+                <span>Main MSEC Campus, Shershah, Karachi, Sindh</span>
+            </p>
+            <p class="flex items-center justify-center gap-2">
+                <i class="fas fa-phone-alt text-emerald-500 text-sm w-4"></i>
+                <span>0318-2142500</span>
+            </p>
+            <p class="flex items-center justify-center gap-2 mb-4">
+                <i class="fas fa-envelope text-emerald-500 text-sm w-4"></i>
+                <span>info@msec.edu.pk</span>
+            </p>
+            
+            <div class="pt-5 border-t border-gray-700 text-[10px] text-gray-500">
+                <p>© 2026 GCT Technical & IT Education Initiative.</p>
+                <p class="mt-1">All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <div id="statusModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
+    <div id="statusModal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl scale-95 transition-transform duration-300" id="modalCard">
             <div id="modalLoading">
                 <div class="animate-spin rounded-full h-12 w-12 border-4 border-emerald-500 border-t-transparent mx-auto mb-4"></div>
@@ -217,14 +238,15 @@
                 <p class="text-xs text-gray-500 mt-1">Please do not close this window.</p>
             </div>
             <div id="modalSuccess" class="hidden">
-                <div class="h-14 w-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-inner">
+                <div class="h-16 w-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-inner">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h3 class="font-bold text-gray-900 text-lg">Registration Successful!</h3>
-                <p class="urdu-text text-sm text-gray-600 mt-2">
-                    آپ کا فارم کامیابی کے ساتھ جمع ہو چکا ہے۔ اپنی سیٹ کنفرم کرنے کے لیے فوری طور پر کیمپس (MSEC شیرشاہ) وزٹ کر کے فیس جمع کروائیں۔
+                <h3 class="font-bold text-gray-900 text-xl mb-1">Registration Sent!</h3>
+                <p class="text-xs text-emerald-600 font-semibold mb-3">Pending Payment Status</p>
+                <p class="urdu-text text-sm text-gray-600 mt-2 leading-relaxed bg-gray-50 p-3 rounded-lg border border-gray-100">
+                    آپ کا فارم کامیابی کے ساتھ جمع ہو چکا ہے۔ اپنی سیٹ کنفرم کرنے کے لیے فوری طور پر کیمپس وزٹ کر کے فیس جمع کروائیں۔
                 </p>
-                <button onclick="closeModal()" class="mt-5 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-all">
+                <button onclick="closeModal()" class="mt-5 w-full bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-3 rounded-xl transition-all shadow-md">
                     Got it, Thanks!
                 </button>
             </div>
@@ -235,46 +257,134 @@
         // PASTE YOUR COPIED GOOGLE APPS SCRIPT WEB APP URL HERE:
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxpUNa2X6pgBFyKGdLv40tdl46h6QndloU_o-i5F5qhDuZHYGu_vkjSZN9d3VrQAOJ3bQ/exec";
 
-        // Course Database Matrix
+        // Gender Toggle Logic (Pill Buttons)
+        let selectedGender = "Female"; // Default
+        const btnMale = document.getElementById('btnMale');
+        const btnFemale = document.getElementById('btnFemale');
+
+        btnMale.addEventListener('click', () => {
+            selectedGender = "Male";
+            btnMale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg bg-white shadow-sm text-emerald-700 transition-all duration-200";
+            btnFemale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg text-gray-500 hover:text-gray-700 transition-all duration-200 bg-transparent";
+        });
+
+        btnFemale.addEventListener('click', () => {
+            selectedGender = "Female";
+            btnFemale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg bg-white shadow-sm text-emerald-700 transition-all duration-200";
+            btnMale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg text-gray-500 hover:text-gray-700 transition-all duration-200 bg-transparent";
+        });
+
+        // --- LIVE FORM VALIDATIONS ---
+        
+        // 1. CNIC Auto-Formatter & Validation
+        const cnicInput = document.getElementById('cnic');
+        const cnicError = document.getElementById('cnicError');
+        let isCnicValid = false;
+
+        cnicInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+            if(value.length > 13) value = value.substring(0, 13);
+            
+            // Format as XXXXX-XXXXXXX-X
+            let formattedValue = value;
+            if(value.length > 5) {
+                formattedValue = value.substring(0, 5) + '-' + value.substring(5);
+            }
+            if(value.length > 12) {
+                formattedValue = formattedValue.substring(0, 13) + '-' + value.substring(12);
+            }
+            e.target.value = formattedValue;
+
+            // Live validation check
+            if(value.length > 0 && value.length < 13) {
+                cnicInput.classList.add('input-error');
+                cnicError.classList.remove('hidden');
+                isCnicValid = false;
+            } else {
+                cnicInput.classList.remove('input-error');
+                cnicError.classList.add('hidden');
+                isCnicValid = value.length === 13 || value.length === 0; 
+            }
+        });
+
+        // 2. WhatsApp Number Validation (03XXXXXXXXX)
+        const waInput = document.getElementById('whatsapp');
+        const waError = document.getElementById('waError');
+        let isWaValid = false;
+
+        waInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, ''); // Remove non-digits
+            if(value.length > 11) value = value.substring(0, 11);
+            e.target.value = value;
+
+            const regex = /^03\d{9}$/;
+            if(value.length > 0 && !regex.test(value)) {
+                waInput.classList.add('input-error');
+                waError.classList.remove('hidden');
+                isWaValid = false;
+            } else {
+                waInput.classList.remove('input-error');
+                waError.classList.add('hidden');
+                isWaValid = regex.test(value) || value.length === 0;
+            }
+        });
+
+        // 3. Email Validation
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('emailError');
+
+        emailInput.addEventListener('input', function(e) {
+            const value = e.target.value;
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(value.length > 0 && !regex.test(value)) {
+                emailInput.classList.add('input-error');
+                emailError.classList.remove('hidden');
+            } else {
+                emailInput.classList.remove('input-error');
+                emailError.classList.add('hidden');
+            }
+        });
+
+        // English Course Database Matrix
         const courseData = {
             "ICT & MS Office": {
                 time: "09:00 AM - 11:00 AM",
                 outline: [
-                    "کمپیوٹر کے بنیادی اصول اور ونڈوز آپریٹنگ سسٹم کا استعمال",
-                    "مائیکروسافٹ ورڈ (MS Word) میں پروفیشنل دستاویزات بنانا",
-                    "مائیکروسافٹ ایکسل (MS Excel) میں فارمولے اور ڈیٹا انٹری",
-                    "پاور پوائنٹ (MS PowerPoint) پر اینیمیٹڈ پریزنٹیشن بنانا",
-                    "انٹرنیٹ براؤزنگ اور پروفیشنل ای میل کمیونیکیشن کے طریقے"
+                    "Introduction to Computer Basics & Windows OS",
+                    "Creating Professional Documents in MS Word",
+                    "Data Entry, Formatting & Formulas in MS Excel",
+                    "Designing Animated Presentations in MS PowerPoint",
+                    "Internet Browsing & Professional Email Etiquette"
                 ]
             },
             "Graphic Designing": {
                 time: "11:30 AM - 01:30 PM",
                 outline: [
-                    "گرافک ڈیزائننگ کے بنیادی تھیوری اور کلر اسکیم گائیڈ لائنز",
-                    "ایڈوبی فوٹوشاپ / کینوا پر سوشل میڈیا پوسٹ ڈیزائننگ",
-                    "پروفیشنل بروشر، فلائرز اور برانڈ لوگو ڈیزائننگ",
-                    "امیج ایڈیٹنگ، بیک گراؤنڈ ریمول اور ویکٹر ٹریسنگ",
-                    "فری لانسنگ مارکیٹ پلیسز پر گرافک سروسز سیل کرنا"
+                    "Fundamentals of Design, Typography & Color Theory",
+                    "Creating Social Media Posts via Canva & Photoshop",
+                    "Designing Professional Flyers, Logos & Brochures",
+                    "Image Editing, Background Removal & Vector Tracing",
+                    "Introduction to Selling Skills on Freelance Platforms"
                 ]
             },
             "Basic Stitching": {
                 time: "09:00 AM - 11:00 AM",
                 outline: [
-                    "سلائی مشین کا استعمال، دیکھ بھال اور بنیادی تکنیک",
-                    "کپڑے کی ناپ لینے اور ڈرافٹنگ کا درست طریقہ",
-                    "بنیادی کٹائی (Cutting) اور سلائی (Stitching) کے مراحل",
-                    "مختلف قسم کے گلے اور آستین کے خوبصورت ڈیزائن",
-                    "روزمرہ استعمال کے سادہ اور فینسی ملبوسات کی تیاری"
+                    "Sewing Machine Operation & Maintenance Basics",
+                    "Accurate Body Measurement & Fabric Drafting",
+                    "Fundamental Cutting and Stitching Techniques",
+                    "Designing Popular Necklines and Sleeves",
+                    "Preparation of Simple Everyday and Casual Wear"
                 ]
             },
             "Self-Grooming & Beautician": {
                 time: "11:30 AM - 01:30 PM",
                 outline: [
-                    "اسکن کیئر، تھریڈنگ اور فیشل مساج کے بنیادی طریقے",
-                    "پارٹی میک اپ اور کیژول گرومنگ ٹپس",
-                    "بنیادی ہیئر اسٹائلنگ اور بالوں کی حفاظت کے طریقے",
-                    "مہندی ڈیزائننگ (پاکستانی اور عربی اسٹائلز)",
-                    "پیشہ ورانہ بیوٹی پارلر سیٹ اپ اور کسٹمر ڈیلنگ"
+                    "Basic Skin Care Routine, Threading & Facial Massages",
+                    "Techniques for Casual Grooming & Party Makeup",
+                    "Fundamental Hair Styling & Hair Care Methods",
+                    "Mehndi Designing (Pakistani & Arabic Styles)",
+                    "Customer Dealing & Basic Salon Setup Awareness"
                 ]
             }
         };
@@ -289,13 +399,14 @@
             const selected = selectEl.value;
             if (courseData[selected]) {
                 previewWin.classList.remove("hidden");
-                titleEl.innerText = selected + " Tracking Summary";
-                timeEl.innerHTML = `<i class="far fa-clock mr-1"></i> Class Timing: **${courseData[selected].time}**`;
+                titleEl.innerText = selected + " Overview";
+                timeEl.innerHTML = `<i class="far fa-clock mr-1 text-emerald-500"></i> Daily Timing: <strong>${courseData[selected].time}</strong>`;
                 
                 outlineEl.innerHTML = "";
                 courseData[selected].outline.forEach(point => {
                     const li = document.createElement("li");
-                    li.innerText = point;
+                    li.className = "flex items-start gap-2";
+                    li.innerHTML = `<i class="fas fa-check text-emerald-400 mt-1 text-[10px]"></i> <span>${point}</span>`;
                     outlineEl.appendChild(li);
                 });
             } else {
@@ -307,20 +418,30 @@
         document.getElementById("registrationForm").addEventListener("submit", function(e) {
             e.preventDefault();
             
+            // Final validation check before submitting
+            if(!isWaValid) {
+                waInput.focus();
+                waInput.classList.add('input-error');
+                waError.classList.remove('hidden');
+                return;
+            }
+            if(!isCnicValid) {
+                cnicInput.focus();
+                cnicInput.classList.add('input-error');
+                cnicError.classList.remove('hidden');
+                return;
+            }
+
             // Open Loading Status Overlay
             document.getElementById("statusModal").classList.remove("hidden");
             document.getElementById("modalLoading").classList.remove("hidden");
             document.getElementById("modalSuccess").classList.add("hidden");
 
-            // Evaluate Gender Toggle Value (If checked = Male, unchecked = Female default)
-            const isMale = document.getElementById("genderToggle").checked;
-            const genderValue = isMale ? "Male" : "Female";
-
             // Map Object matching App Script JSON parameters
             const formData = {
                 studentName: document.getElementById("studentName").value,
                 fatherName: document.getElementById("fatherName").value,
-                gender: genderValue,
+                gender: selectedGender, // Extracted from new logic
                 cnic: document.getElementById("cnic").value,
                 education: document.getElementById("education").value,
                 role: document.getElementById("role").value,
@@ -330,21 +451,22 @@
                 course: document.getElementById("course").value
             };
 
-            // Execute HTTP Post via Fetch API API Bridge
+            // Execute HTTP Post via Fetch API Bridge
             fetch(SCRIPT_URL, {
                 method: "POST",
-                mode: "no-cors", // Necessary bypass for standard Google Redirects
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                mode: "no-cors", 
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
             })
             .then(res => {
-                // Since no-cors returns opaque responses, assume success if network executes
                 document.getElementById("modalLoading").classList.add("hidden");
                 document.getElementById("modalSuccess").classList.remove("hidden");
                 document.getElementById("registrationForm").reset();
                 document.getElementById("coursePreviewWindow").classList.add("hidden");
+                // reset gender back to female default
+                selectedGender = "Female";
+                btnFemale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg bg-white shadow-sm text-emerald-700 transition-all duration-200";
+                btnMale.className = "w-1/2 py-1.5 text-[11px] font-bold rounded-lg text-gray-500 hover:text-gray-700 transition-all duration-200 bg-transparent";
             })
             .catch(err => {
                 alert("Network error, please try again or contact support.");
